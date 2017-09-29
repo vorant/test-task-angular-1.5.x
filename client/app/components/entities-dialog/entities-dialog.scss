@@ -1,0 +1,58 @@
+.entities-dialog {
+  height: 100%;
+  width: 100%;
+
+  &__header {
+    text-align: center;
+    position: relative;
+    margin-top: 56px;
+  }
+  &__header-text {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__close-dialog {
+    position: absolute;
+    right: 64px;
+    height: 32px;
+    width: 32px;
+    bottom: 0;
+    cursor: pointer;
+  }
+  &__heading {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 32px;
+    line-height: 40px;
+    padding: 40px 0;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  &__button {
+    height: 60px;
+    width: 234.47px;
+    border-radius: 2px;
+    background-color: #4CAF50 !important; // override standard material styles
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12),
+    0 2px 2px 0 rgba(0, 0, 0, 0.24);
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff !important; // override standard material styles
+
+  }
+  &__actions {
+    padding-top: 93px;
+  }
+}
+
+.md-dialog-fullscreen {
+  min-height: 100%;
+  min-width: 100%;
+}

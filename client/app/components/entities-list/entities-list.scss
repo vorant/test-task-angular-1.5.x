@@ -1,0 +1,114 @@
+.entities-list {
+  display: flex;
+  justify-content: center;
+
+  &__content {
+    width: 780px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12),
+    0 2px 2px 0 rgba(0, 0, 0, 0.24);
+  }
+
+  &__search-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 21px 0 24px;
+    height: 63px;
+    border-bottom: 1px solid #D8D8D8;
+  }
+  &__search-icon {
+    margin-right: 8px;
+  }
+  &__search-input {
+    flex: 1 0 0;
+    border: none;
+    background: #fff;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &__filter-icon {
+    transform: scale(0.75);
+  }
+
+  &__list {
+    padding: 0 !important;
+    margin: 0;
+  }
+
+  &__list-item {
+    margin: 0;
+    border-bottom: 1px solid #EEEEEE;
+    padding: 0;
+    display: flex;
+    //justify-content: center;
+    align-items: center;
+  }
+  &__list-item:last-child {
+    border-bottom: none;
+  }
+
+  &__list-item.ng-move,
+  &__list-item.ng-enter,
+  &__list-item.ng-leave {
+    transition: all linear 0.3s;
+  }
+
+  &__list-item.ng-leave.ng-leave-active,
+  &__list-item.ng-move,
+  &__list-item.ng-enter {
+    opacity: 0;
+    max-height: 0;
+    //max-height: 71px;
+  }
+
+  &__list-item.ng-leave,
+  &__list-item.ng-move.ng-move-active,
+  &__list-item.ng-enter.ng-enter-active {
+    opacity: 1;
+    max-height: 71px;
+    //max-height: 71px;
+  }
+
+  &__list-item-content {
+    //padding: 0 0 0 16px;
+    height: 72px;
+    margin: 0 !important;
+    padding: 0 31px !important;
+    display: flex !important;
+    align-items: center !important;
+    width: 100%;
+  }
+  &__list-text-content {
+    display: block;
+    text-align: left;
+    padding-left: 13px;
+  }
+  &__list-item-label {
+    padding: 0;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.87);
+    //font-family: Roboto;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: none !important;
+  }
+  &__list-item-sublabel {
+    padding: 0;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.54);
+    //font-family: Roboto;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: none !important;
+  }
+  &__list-item-checkbox {
+    width: 18px;
+    height: 18px;
+    transform: scale(0.9);
+    margin: 0 !important;
+  }
+  md-checkbox.md-checked .md-icon {
+    background-color: #303F9F;
+  }
+}

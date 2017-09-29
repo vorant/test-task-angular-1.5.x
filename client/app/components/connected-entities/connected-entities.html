@@ -1,0 +1,22 @@
+<div class="connected-entities">
+  <div class="connected-entities__button" ng-click="$ctrl.showEntities($event)">
+    <md-icon class="connected-entities__button-icon" ng-click="$ctrl.addEntity($event)">add</md-icon>
+    <span class="connected-entities__button-text" ng-class="{'_connected': $ctrl.entities.length}">
+      <span ng-if="!$ctrl.entities.length">Connect entity</span>
+      <span ng-if="$ctrl.entities.length">Entities connected ({{$ctrl.entities.length}})</span>
+    </span>
+
+    <md-icon ng-if="$ctrl.entities.length" class="connected-entities__arrow-icon">{{$ctrl.arrowIcon}}</md-icon>
+  </div>
+  <ul class="connected-entities__entities">
+    <li class="connected-entities__entity"
+        ng-if="$ctrl.entities.length && $ctrl.isEntitiesShowed"
+        ng-repeat="entity in $ctrl.entities track by $index">
+
+      <div class="connected-entities__entity-content" md-button>
+        <p class="connected-entities__entity-label">{{entity.label}}</p>
+        <p class="connected-entities__entity-sublabel">{{entity.sublabel}}</p>
+      </div>
+    </li>
+  </ul>
+</div>

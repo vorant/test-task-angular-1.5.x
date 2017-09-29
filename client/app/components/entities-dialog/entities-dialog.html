@@ -1,0 +1,26 @@
+<div class="entities-dialog">
+  <div class="entities-dialog__header">
+    <span class="entities-dialog__header-text">2016 KPI:$15M Renewal Revenue (Strategic Goal)</span>
+    <md-icon class="entities-dialog__close-dialog"
+             ng-click="$ctrl.cancel()"
+             md-svg-src="assets/close.svg"
+             aria-label="Close dialog">
+    </md-icon>
+  </div>
+
+  <form ng-cloak>
+    <md-dialog-content>
+      <div class="entities-dialog__md-dialog-content">
+        <h2 class="entities-dialog__heading">Add entities</h2>
+        <entities-list entities="$ctrl.allEntities" chosen-entities="$ctrl.chosenEntities"
+                       on-chosen="$ctrl.chooseEntity(entity)"></entities-list>
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row" layout-align="center" class="entities-dialog__actions">
+      <md-button class="entities-dialog__button" ng-click="$ctrl.connect()">
+        Connect
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</div>

@@ -1,0 +1,28 @@
+<div class="entities-list">
+  <div class="entities-list__content">
+    <div class="entities-list__search-block">
+      <md-icon class="entities-list__search-icon"
+               aria-label="Search">search
+      </md-icon>
+      <input type="text" class="entities-list__search-input" placeholder="Search entity" ng-model="search">
+      <md-icon class="entities-list__filter-icon"
+               md-svg-src="assets/filter.svg"
+               aria-label="Search">
+      </md-icon>
+    </div>
+
+    <ul class="entities-list__list">
+      <li class="entities-list__list-item" ng-repeat="entity in $ctrl.entities | filter:search track by entity.label"
+          ng-click="$ctrl.choseEntity(entity)">
+        <div class="entities-list__list-item-content" md-button>
+          <md-checkbox class="entities-list__list-item-checkbox" ng-model="entity.selected"></md-checkbox>
+          <div class="entities-list__list-text-content">
+            <h3 class="entities-list__list-item-label">{{entity.label}}</h3>
+            <p class="entities-list__list-item-sublabel">{{entity.sublabel}}</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</div>
