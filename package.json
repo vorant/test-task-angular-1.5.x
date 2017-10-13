@@ -64,7 +64,7 @@
     "test": "karma start",
     "watch": "gulp serve",
     "webpack": "gulp webpack",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "keywords": [
     "angular",
