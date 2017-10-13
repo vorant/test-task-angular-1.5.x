@@ -15,7 +15,7 @@
       <li class="entities-list__list-item" ng-repeat="entity in $ctrl.entities | filter:search track by entity.label"
           ng-click="$ctrl.choseEntity(entity)">
         <div class="entities-list__list-item-content" md-button>
-          <md-checkbox class="entities-list__list-item-checkbox" ng-model="entity.selected"></md-checkbox>
+          <md-checkbox class="entities-list__list-item-checkbox" ng-model="entity.selected" ng-click="$event.stopPropagation()"></md-checkbox>
           <div class="entities-list__list-text-content">
             <h3 class="entities-list__list-item-label">{{entity.label}}</h3>
             <p class="entities-list__list-item-sublabel">{{entity.sublabel}}</p>

@@ -18,6 +18,26 @@ const entities = [
   {
     label: 'Technical issues',
     sublabel: 'Project'
+  },
+  {
+    label: 'Arrivals 2',
+    sublabel: 'BPM',
+  },
+  {
+    label: 'Car Wash 2',
+    sublabel: 'BPM'
+  },
+  {
+    label: 'Maintenance 2',
+    sublabel: 'Project'
+  },
+  {
+    label: 'Customer payment 2',
+    sublabel: 'BPM'
+  },
+  {
+    label: 'Technical issues 2',
+    sublabel: 'Project'
   }
 ];
 
